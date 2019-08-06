@@ -2,7 +2,7 @@ function binarySearch(arr, val) {
   let l = 0
   let r = arr.length - 1
   while(l <= r) {
-    let m = (l + r)/2
+    let m = (l + r)/2 | 0
     if(arr[m] === val)
       return m
     if(arr[m] < val)
@@ -12,3 +12,5 @@ function binarySearch(arr, val) {
   }
   return -1
 }
+
+module.exports = binarySearch
